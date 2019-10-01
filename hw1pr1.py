@@ -11,7 +11,7 @@ def dot(L,K):
     if L == [] and K == []:
         return 0.0
     elif length(L) != length(K):
-        print("You stupid bitch, you can't take the dot product of different sized lists")
+        print("You can't take the dot product of different sized lists")
     else:
         return L[0]*K[0] + dot(L[1:],K[1:])
 
