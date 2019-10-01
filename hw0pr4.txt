@@ -1,0 +1,35 @@
+# RIGHT HAND RULE!!!
+# Always keeping Right hand on the wall to cover entire maze
+# Help from the CS gold handout
+# state 0 with no wall N & a wall to the E move N + st 0
+0 xE** -> N 0
+# state 0 with wall N&E & no wall to the W||S move W + st 3
+0 NExx -> W 3
+# state 0 with no wall E, move E + st 1
+0 *x** -> E 1
+# state 0 dead end, move S + st 2
+0 NEWx -> S 2
+# state 1 with S wall & no E wall, move E + st 1
+1 *x*S -> E 1
+# state 1 dead end, move W + st 3
+1 NExS -> W 3
+# state 1 SE corner, move N + st 0
+1 xExS -> N 0
+# state 1 with no wall S, move S + st 2
+1 ***x -> S 2
+# state 2 with W wall & no S wall, move S + st 2
+2 **Wx -> S 2
+# state 2 SW corner, move E + st 1
+2 xxWS -> E 1
+# state 2 dead end, move N + st 0
+2 xEWS -> N 0
+# state 2 with no wall W, move W + st 3
+2 **x* -> W 3
+# state 3 with N wall & no W wall, move W + st 3
+3 N*x* -> W 3
+# state 3 dead end, move E + st 1
+3 NxWS -> E 1
+# state 3 NW corner, move S + st 2
+3 NxWx -> S 2
+# state 3 with no wall N, move N + st 0
+3 x*** -> N 0

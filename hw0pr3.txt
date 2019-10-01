@@ -1,0 +1,44 @@
+# state 0 with nothing N: go one step N
+0 x*** -> N 0   
+
+# state 0 with something to the N & W: go S + into state 1 
+# 0 N*W* -> S 1
+
+#state 0 with something to the N: go W and into state 1
+0 N*** -> W 1 
+
+# state 1 with nothing to the W: go one step W
+1 **x* -> W 1   
+
+# state 1 with something to the W: go one step S + into state 2
+1 **W* -> S 2
+
+# state 2 with nothing S: go one step S 
+2 ***x -> S 2
+
+# state 2 with something to the S: go one step E and to state 3
+2 ***S -> E 3
+
+# state 3 with nothing to the E: go one step E
+3 *x** -> E 3
+
+# state  3 with something to the E: go one step N and into state 4
+3 *E** -> N 4
+
+# state 4 with nothing to the north: go one step N
+4 x*** -> N 4
+
+# state 4 with something to the N: go one step W + st 5
+4 N*** -> W 5
+
+# state 5 go south if no S wall
+5 ***x -> S 5
+
+# state 5 if south wall: go west + st 6
+5 ***S -> W 6
+
+# state 6 if no N wall: move N
+6 x*** -> N 6
+
+# state 6 if N wall: move west and st 5
+6 N*** -> W 5
