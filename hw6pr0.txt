@@ -1,0 +1,18 @@
+In The Education of a Computer, Hopper lists two drawbacks of "using subroutines," that is, of abstracting computation into reusable functions. Do you feel those two drawbacks still exist today? How important are they today?
+
+In 'regular' programs and problems I don't think this problem still exists. Computers run so quickly, that the fractions of seconds between running doesn't make a difference. However, in larger problems, I can see where concern may lie. But this is the case with all computers, maybe less so with quantum computers, there will eventually be problems too large to solve or things to complex to simulate so the computer will run slowly. It's all relative to what we're doing, but generally it shouldn't be a problem.
+
+
+Hopper also lists five advantages of "using subroutines" in the short excerpt included above. However, some important advantages of today's high-level languages, like Python, are not part of that list! Explain at least one advantage of a high-level language that Hopper does not mention in Education of a Computer. This may be an idea of your own, for sure, or you might take one from those mentioned in her biography—she continued expanding her arguments as time passed!
+
+The readability and edibility for the programmer and their colleagues becomes much easier with functional programming. Using descriptive function names and variables, the debugging and editing of broken up functional code is much easier than having one big block of code with possible the same function written multiple times. Also, these high level languages encourage the use of their features that eliminate the need to design more functions! Higher level functions like lambda do this.
+
+
+What facts, opinions, or claims did you find surprising in this article?
+
+The entire idea of an attention economy was surprising and eye opening. I noticed that I do lots of the things that the article references. I did find the claim that these tech companies stumbled upon attention grabbing techniques accidentally, pretty surprising as well; I would think that they would want to do this on purpose to maximize profits and product usability. Also, the fact that the people who created the attention grabbing features are the main ones that are advocating for change was extremely interesting. 
+
+
+Tristan Harris and Nir Eyal had the same advisor at Stanford and now hold rather different positions on the ethics of the "attention economy". Do you lean towards one of these positions more than the other? If so, explain where you lean on this issue and briefly explain why. If you don't lean one way or the other, please briefly explain your ambivalence.
+
+I believe that people shouldn't be subjected to these attention grabbing techniques without being notified of them. The general public is being taken advantage of using neurological techniques that target our attention. If people were notified that these things are taking place, then I guess it would be fair, but it shouldn't be done without notice. This is because people usually use apps for one specific purpose, and once they log in, they're subconsciously being dragged into doing or viewing something else. This isn't right morally.
