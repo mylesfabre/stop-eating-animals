@@ -1,0 +1,67 @@
+# hw6 problem 3
+# Name: Myles Fabre
+#
+# Hmmm...
+#
+
+00 read r1      # read the number of disks into r1
+01 read r2      # read the starting peg into r2
+02 read r3      # read the destination peg into r3
+03 setn r15 90
+04 setn r9 1
+05 calln r14 7
+06 halt
+
+# hanoi base case
+07 setn r4 -1   # set r4 to -1
+08 add r5 r1 r4 # add -1 the number of disks
+09 nop #jeqzn r5 6   # if there are 0 (actually 1) disks jump to print line
+10 nop #add r5 r5 r4
+11 jgtzn r5 15
+12 write r2
+13 write r3
+14 jumpr r14
+
+# hanoi 1
+15 add r6 r2 r3 # adding the fromPeg and destinationPeg
+16 setn r7 6    # setting r7 to 6
+17 sub r8 r7 r6 # finding the otherPeg number
+18 pushr r14 r15 #
+19 pushr r1 r15 # pushing the number of disks to the stack
+20 pushr r2 r15 # pushing the fromPeg to the stack
+21 pushr r8 r15 # pushing the otherPeg to the stack
+22 pushr r3 r15 #
+23 copy r3 r8   # setting r3 to the other peg
+24 add r1 r1 r4 #
+25 calln r14 7 # hanoi(disks-1,FromPeg, OtherPeg)
+26 popr r3 r15  #
+27 popr r8 r15  #
+28 popr r2 r15  #
+29 popr r1 r15  #
+
+# hanoi 2
+30 pushr r1 r15 #
+31 pushr r2 r15 #
+32 pushr r8 r15 #
+33 pushr r3 r15 #
+34 copy r1 r9   #
+35 calln r14 7  #
+36 popr r3 r15  #
+37 popr r8 r15  #
+38 popr r2 r15  #
+39 popr r1 r15  #
+
+# hanoi 3
+40 pushr r1 r15 #
+41 pushr r8 r15 #
+42 pushr r3 r15 #
+43 pushr r2 r15 #
+44 copy r2 r8   #
+45 addn r1 -1   #
+46 calln r14 7  #
+47 popr r2 r15  #
+48 popr r3 r15  #
+49 popr r8 r15  #
+50 popr r1 r15  #
+51 popr r14 r15 #
+52 jumpr r14    #

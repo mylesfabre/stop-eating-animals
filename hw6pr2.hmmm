@@ -1,0 +1,23 @@
+# hw6 problem 2
+#
+# Name(s): 
+#
+
+# This is a placeholder whose code you'll replace:
+00 read r1      # get # from user to r1
+01 jeqzn r1 16  # if n is 0, jump to halt
+02 setn r4 1    # set r4 to 1 for the first fibonacci number
+03 write r4     # write r4 before the adding process
+04 addn r1 -1   # subtract 1 from n
+05 jeqzn r1 16  # if new n is 0, jump to halt
+06 setn r2 0    # set r2 the first adding register to 0
+07 setn r3 1    # set r3 the second adding register to 1
+08 add r2 r2 r3 # add r2 and r3 and store into r2
+09 write r2     # print the r2, the sum of r2 and r3
+10 addn r1 -1   # subtract 1 fron n
+11 jeqzn r1 16  # is n is 0, jump to halt
+12 add r3 r2 r3 # store the sum of r2 and r3 in r3
+13 write r3     # print r3, the sum of r2 and r3
+14 addn r1 -1   # subtract 1 from n
+15 jnezn r1 8   # if n is not 0, jump to line 8
+16 halt         # STOP

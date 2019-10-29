@@ -1,0 +1,14 @@
+# Name(s): Myles Fabre
+# CS5 Black
+
+# Lab task #1a: Change the above code to "the cubic countdown"
+
+00 read r1        # get user input
+01 mul r2 r1 r1   # r2 is square of r1
+02 mul r3 r2 r1   # r3 is cube of r1
+03 write r3       # print r3
+04 addn r3 -1     # halts! [use ctrl-c]
+05 write r3       # prints the new r3 -1
+06 jgtzn r3 4     # loops back if r3 is greater than 0
+07 jeqzn r3 8     # ends the program if r3 = 0
+08 halt           # STOP

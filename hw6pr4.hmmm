@@ -1,0 +1,45 @@
+# hw6 problem 4
+#
+# Name(s): Myles Fabree , Sidney Taylorr
+#
+# Hmmm...
+#
+#
+
+00 read r1
+01 setn r15 60 
+02 calln r14 12
+03 write r13
+04 halt
+05 nop
+06 setn r13 1
+07 addn r1 1
+08 jumpr r14
+09 setn r13 1
+10 addn r1 2
+11 jumpr r14
+12 addn r1 -1
+13 jeqzn r1 6  # if n is 1 jump to write line 3
+14 addn r1 -1
+15 jeqzn r1 9  # if n is 2 jump to write line 3
+16 addn r1 2
+17 pushr r1 r15
+18 pushr r14 r15
+19 addn r1 -1
+20 calln r14 12
+21 popr r14 r15
+22 popr r1 r15
+23 nop
+24 nop
+25 nop
+26 copy r3 r13
+27 pushr r1 r15
+28 pushr r14 r15
+29 pushr r3  r15
+30 addn r1 -2
+31 calln r14 12
+32 popr r3 r15
+33 popr r14 r15
+34 popr r1 r15
+35 add r13 r13 r3
+36 jumpr r14

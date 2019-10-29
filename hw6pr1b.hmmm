@@ -1,0 +1,22 @@
+# hw6pr1b.hmmm will become a random-number generator
+#
+# Name(s): Myles Fabre
+
+# Lab task #2: Expand this to become your random-number generator:
+#   (Note: this is starter code that correctly handles the inputs...)
+
+00 read r1       # input a
+01 read r2       # input c
+02 read r3       # input m
+03 read r4       # input X_0
+04 read r5       # input N
+05 jeqzn r5 14   # if input N, number of ints, is 0, jump to ln 14, halt
+06 mul r6 r1 r4  # multiply r1 and r4 and store that into r6
+07 add r7 r6 r2  # add r6 and r2 and store into r7
+08 mod r8 r7 r3  # modulo r7 by r3 and store into r8
+09 write r8      # print r8
+10 addn r5 -1    # subtract 1 from r5, number of ints
+11 jeqzn r5 14   # if r5, number of ints, is 0, jump to ln 14, halt
+12 copy r4 r8    # let r4 = r8
+13 jumpn 6       # jump to ln 6 to start over again
+14 halt          # STOP
