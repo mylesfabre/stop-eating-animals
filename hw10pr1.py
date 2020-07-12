@@ -3,10 +3,6 @@
 # Name: Myles Fabre
 #
 
-# First, the class definition
-# Below, we define several useful objects of type Date
-#  +++ keep those and/or add your own! +++
-
 # Days in each month 
 DIM = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
@@ -15,7 +11,6 @@ class Date(object):
        stores and manipulates dates.
     """
 
-    # The constructor is always named __init__ !
     def __init__(self, month, day, year):
         """Construct a Date with the given month, day, and year."""
         self.month = month
@@ -23,7 +18,6 @@ class Date(object):
         self.year = year
 
 
-    # The "printing" function is always named __repr__ !
     def __repr__(self):
         """This method returns a string representation for the
            object of type Date that calls it (named self).
@@ -35,8 +29,7 @@ class Date(object):
         s = "{:02d}/{:02d}/{:04d}".format(self.month, self.day, self.year)
         return s
 
-
-    # Here is an example of a "method" of the Date class:
+# method of the Date class:
     def isLeapYear(self):
         """Returns True if the calling object is
            in a leap year; False otherwise."""
@@ -121,9 +114,6 @@ class Date(object):
 
 #
 # lots of dates to work with...
-#
-# The nice thing about putting them here is that they get redefined with
-#   each run of the software (which is needed for testing!)
 #
 
 d = Date(11, 12, 2019)    # Today?
