@@ -1,6 +1,4 @@
-# RIGHT HAND RULE!!!
 # Always keeping Right hand on the wall to cover entire maze
-# Help from the CS gold handout
 # state 0 with no wall N & a wall to the E move N + st 0
 0 xE** -> N 0
 # state 0 with wall N&E & no wall to the W||S move W + st 3
